@@ -1,14 +1,15 @@
 
 alert('Bienvenido al juego del número secreto');
 //Declaramos variables
-let numeroSecreto = Math.floor(Math.random()*10)+1; 
+let limiteMaximo = 20;
+let numeroSecreto = Math.floor(Math.random()*limiteMaximo)+1; 
 let numeroDeUsuario;
 let intentos = 1;
 //let palabraIntentos = "intento";
-let maximosIntentos = 3;
+let maximosIntentos = 5;
 
 while(numeroDeUsuario != numeroSecreto){
-    numeroDeUsuario = parseInt(prompt("Dime un número  entre 1 y 10 por favor:"));
+    numeroDeUsuario = parseInt(prompt(`Dime un número  entre 1 y ${limiteMaximo} por favor:`));
     // Agrega un console.log para verificar el valor de "numeroDeUsurio" después de la entrada del usuario
     console.log('Valor del intento:', numeroDeUsuario);
 
