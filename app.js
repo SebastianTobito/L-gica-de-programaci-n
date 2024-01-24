@@ -1,25 +1,25 @@
 
 alert('Bienvenido al juego del número secreto');
 //Declaramos variables
-let numeroSecreto = 6;
+let numeroSecreto = Math.floor(Math.random()*10)+1; 
 let numeroDeUsuario;
 let intentos = 1;
 //let palabraIntentos = "intento";
 let maximosIntentos = 3;
 
 while(numeroDeUsuario != numeroSecreto){
-    numeroDeUsuario = prompt("Dime un número  entre 1 y 10 por favor:");
+    numeroDeUsuario = parseInt(prompt("Dime un número  entre 1 y 10 por favor:"));
     // Agrega un console.log para verificar el valor de "numeroDeUsurio" después de la entrada del usuario
     console.log('Valor del intento:', numeroDeUsuario);
 
     //Mostramos el numero en consola
-    console.log(numeroDeUsuario);
+    console.log(typeof(numeroDeUsuario));
 
     //se hace la comparacion
     // Agrega un console.log para verificar la comparación entre "numeroDeUsuario" y "numeroSecreto"
     console.log('Resultado de la comparación:', numeroDeUsuario == numeroSecreto);
 
-    if (numeroDeUsuario == numeroSecreto) {
+    if (numeroDeUsuario === numeroSecreto) {
         //La respuesta en caso de que se cumpla la condición
         alert(`¡Acertaste!,  el numero es: ${numeroSecreto}. Lo hiciste en ${intentos} ${intentos == 1 ? "intento" : "intentos" }`);
         
